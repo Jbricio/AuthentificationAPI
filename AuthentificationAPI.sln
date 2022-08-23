@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D944AE8F-6D36-4E35-9C53-F358C9865A12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentificationAPI", "src\AuthentificationAPI\AuthentificationAPI.csproj", "{CA983B1E-7EAA-4081-9DF3-B0D0D3055749}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8E81A797-D39F-425E-96C9-43E15DCDA7D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C7E69B10-7A36-435B-89BB-319E2521343E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{DD36F832-889E-4F35-A82C-9402E2A40703}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{89095EC0-D9C5-4C8D-A985-A8634AA1761B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA983B1E-7EAA-4081-9DF3-B0D0D3055749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA983B1E-7EAA-4081-9DF3-B0D0D3055749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA983B1E-7EAA-4081-9DF3-B0D0D3055749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA983B1E-7EAA-4081-9DF3-B0D0D3055749}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA983B1E-7EAA-4081-9DF3-B0D0D3055749} = {D944AE8F-6D36-4E35-9C53-F358C9865A12}
+		{8E81A797-D39F-425E-96C9-43E15DCDA7D8} = {D944AE8F-6D36-4E35-9C53-F358C9865A12}
+		{C7E69B10-7A36-435B-89BB-319E2521343E} = {D944AE8F-6D36-4E35-9C53-F358C9865A12}
+		{DD36F832-889E-4F35-A82C-9402E2A40703} = {D944AE8F-6D36-4E35-9C53-F358C9865A12}
+		{89095EC0-D9C5-4C8D-A985-A8634AA1761B} = {D944AE8F-6D36-4E35-9C53-F358C9865A12}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C1C0877-ADB2-4A1E-B80F-5F6F4C6D6E89}
+	EndGlobalSection
+EndGlobal
