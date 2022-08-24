@@ -7,7 +7,7 @@ namespace AuthentificationAPI.DTOS
     {
         public MappingProfile()
         {
-            CreateMap<UserRequest, Users>();
+            CreateMap<UserRequest, User>();
         }
     }
 }

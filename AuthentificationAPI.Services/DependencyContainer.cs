@@ -8,7 +8,7 @@ namespace AuthentificationAPI.Services
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            services.AddSingleton<IJWTManagerRepository, JWTManagerRepository>();
+            services.AddScoped<IUsersService, UsersService>();
             return services;
         }
     }

@@ -43,7 +43,7 @@ namespace AuthentificationAPI.Persistence
             return this.dbContext.Set<TEntity>();
         }
 
-        public async Task<TEntity> GetById<TEntity>(Expression<Func<TEntity, bool>> filter, CancellationToken cancellationToken)
+        public async Task<TEntity> GetById<TEntity>(Expression<Func<TEntity, bool>> filter,CancellationToken cancellationToken)
             where TEntity : class, IEntityBase<TKey>
         {
             var entity = await this.dbContext.Set<TEntity>().FirstOrDefaultAsync(filter, cancellationToken);

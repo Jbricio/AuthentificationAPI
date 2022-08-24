@@ -10,7 +10,7 @@ namespace AuthentificationAPI.Contracts
 {
     public interface IUsersService
     {
-            bool ValidateUser(UserRequest user,CancellationToken cancellation);
+        Task<bool> ValidateUser(UserRequest user,CancellationToken cancellation);
 
     }
 }

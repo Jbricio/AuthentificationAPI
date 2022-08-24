@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuthentificationAPI.API\AuthentificationAPI.API.csproj" />
     <ProjectReference Include="..\AuthentificationAPI.DTOS\AuthentificationAPI.DTOS.csproj" />
     <ProjectReference Include="..\AuthentificationAPI.Persistence\AuthentificationAPI.Persistence.csproj" />
     <ProjectReference Include="..\AuthentificationAPI.Services\AuthentificationAPI.Services.csproj" />

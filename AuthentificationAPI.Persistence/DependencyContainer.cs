@@ -1,5 +1,4 @@
 ﻿using AuthentificationAPI.Contracts;
-using AuthentificationAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,11 +11,11 @@ namespace AuthentificationAPI.Persistence
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("SQLServer"),
-                    x => x.MigrationsAssembly(typeof(RepositoryContext).Assembly.GetName().Name));                
+                options.UseSqlServer(configuration.GetConnectionString("SQLServer"));                
             });
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IJWTManager, JWTManager>();
             return services;
         }
     }

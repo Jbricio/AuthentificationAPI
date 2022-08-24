@@ -3,12 +3,13 @@ using AuthentificationAPI.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AuthentificationAPI.Contracts
 {
-    public interface IJWTManagerRepository
+    public interface IJWTManager
     {
-        Tokens Authenticate(UserRequest users);
+        Task<Tokens> Authenticate(UserRequest users, CancellationToken cancellationToken);
     }
 }
