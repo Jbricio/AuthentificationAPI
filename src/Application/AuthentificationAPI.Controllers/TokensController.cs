@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 
 namespace AuthentificationAPI.Controllers
 {
-
+    [Route("tokens")]
+    [ApiController]
     public class TokensController : ControllerBase
     {
         private readonly IJWTManager _Jwmanager;
@@ -22,9 +23,8 @@ namespace AuthentificationAPI.Controllers
             _Jwmanager = jWTManager;
         }
 
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("authenticate")]
+        //[AllowAnonymous]
+        [HttpPost("Authentication")]
 
         public async Task<IActionResult> GetAuthentication(UserRequest user, CancellationToken cancellation)
         {

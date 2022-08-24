@@ -37,9 +37,13 @@ namespace AuthentificationAPI.Persistence
 				{
 					Subject = new ClaimsIdentity(new Claim[]
 				  {
-			 new Claim(ClaimTypes.Name, users.Name)
+			 new Claim(ClaimTypes.Name, users.Name),
+			 //new Claim(ClaimTypes.Role, "Admin"),
+			 //new Claim(ClaimTypes.Role, "Guest"),
 				  }),
 					Expires = DateTime.UtcNow.AddMinutes(10),
+                    Issuer = _configuration["JWT:Issuer"],
+                    Audience = _configuration["JWT:Audience"],
 					SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
 				};
 				var token = tokenHandler.CreateToken(tokenDescriptor);
