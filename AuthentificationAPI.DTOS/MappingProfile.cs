@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using AuthentificationAPI.Entities;
+﻿using AuthentificationAPI.Entities;
+using AutoMapper;
 
 namespace AuthentificationAPI.DTOS
 {

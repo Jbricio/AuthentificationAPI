@@ -8,7 +8,7 @@ namespace AuthentificationAPI.IoC
 {
     public static class DependencyContainer
     {
-        public static IServiceCollection AddDependencies(this IServiceCollection services, 
+        public static IServiceCollection AddDependencies(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.AddServices();

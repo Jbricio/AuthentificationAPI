@@ -2,7 +2,7 @@
 
 namespace AuthentificationAPI.Entities
 {
-    public class User: IEntityBase<int>
+    public class User : IEntityBase<int>
     {
         public int Id { get; set; }
         public string Name { get; set; }

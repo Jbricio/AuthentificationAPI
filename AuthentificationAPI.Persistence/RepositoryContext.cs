@@ -15,6 +15,6 @@ namespace AuthentificationAPI.Persistence
             modelBuilder.ApplyConfiguration(new UserEntityConfig());
         }
         public DbSet<User> User { get; set; }
-        
+
     }
 }

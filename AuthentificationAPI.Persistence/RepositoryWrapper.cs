@@ -1,5 +1,4 @@
 ﻿using AuthentificationAPI.Contracts;
-using AuthentificationAPI.Entities;
 using System.Threading.Tasks;
 
 namespace AuthentificationAPI.Persistence
@@ -7,7 +6,7 @@ namespace AuthentificationAPI.Persistence
     public class RepositoryWrapper : IRepositoryWrapper
     {
         private readonly RepositoryContext _repositoryContext;
-        private  IUserRepository _users;
+        private IUserRepository _users;
         public IUserRepository User
         {
             get

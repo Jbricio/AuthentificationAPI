@@ -1,10 +1,7 @@
 ﻿using AuthentificationAPI.Contracts;
-using AuthentificationAPI.Entities;
 using Campus.Core;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,9 +25,9 @@ namespace AuthentificationAPI.Persistence
 
         public async Task<bool> Delete<TEntity>(Expression<Func<TEntity, bool>> filter, CancellationToken cancellationToken) where TEntity : class, IEntityBase<TKey>
         {
-           
-            var entity = await this.dbContext.Set<TEntity>().FirstOrDefaultAsync(filter,cancellationToken);
-            if(entity != null)
+
+            var entity = await this.dbContext.Set<TEntity>().FirstOrDefaultAsync(filter, cancellationToken);
+            if (entity != null)
             {
                 this.dbContext.Set<TEntity>().Remove(entity);
                 return await this.dbContext.SaveChangesAsync(cancellationToken) > 0;
@@ -43,14 +40,14 @@ namespace AuthentificationAPI.Persistence
             return this.dbContext.Set<TEntity>();
         }
 
-        public async Task<TEntity> GetById<TEntity>(Expression<Func<TEntity, bool>> filter,CancellationToken cancellationToken)
+        public async Task<TEntity> GetById<TEntity>(Expression<Func<TEntity, bool>> filter, CancellationToken cancellationToken)
             where TEntity : class, IEntityBase<TKey>
         {
             var entity = await this.dbContext.Set<TEntity>().FirstOrDefaultAsync(filter, cancellationToken);
             return entity;
         }
 
-        public async Task<bool> Update<TEntity>(TEntity entity, CancellationToken cancellationToken) 
+        public async Task<bool> Update<TEntity>(TEntity entity, CancellationToken cancellationToken)
             where TEntity : class, IEntityBase<TKey>
         {
             this.dbContext.Set<TEntity>().Update(entity);

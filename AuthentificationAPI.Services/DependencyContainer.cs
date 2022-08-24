@@ -1,5 +1,4 @@
 ﻿using AuthentificationAPI.Contracts;
-using AuthentificationAPI.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AuthentificationAPI.Services

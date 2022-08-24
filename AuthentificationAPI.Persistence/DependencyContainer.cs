@@ -11,7 +11,7 @@ namespace AuthentificationAPI.Persistence
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("SQLServer"));                
+                options.UseSqlServer(configuration.GetConnectionString("SQLServer"));
             });
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             services.AddScoped<IUserRepository, UserRepository>();
