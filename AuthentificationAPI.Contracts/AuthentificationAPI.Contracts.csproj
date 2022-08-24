@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuthentificationAPI.DTOS\AuthentificationAPI.DTOS.csproj" />
+    <ProjectReference Include="..\AuthentificationAPI.Entities\AuthentificationAPI.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

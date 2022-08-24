@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AuthentificationAPI.Contracts;
+using AuthentificationAPI.Persistence;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AuthentificationAPI.Services
 {
@@ -6,6 +8,7 @@ namespace AuthentificationAPI.Services
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
+            services.AddSingleton<IJWTManagerRepository, JWTManagerRepository>();
             return services;
         }
     }

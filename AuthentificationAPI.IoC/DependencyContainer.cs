@@ -12,7 +12,7 @@ namespace AuthentificationAPI.IoC
         public static IServiceCollection AddDependencies(this IServiceCollection services, 
             IConfiguration configuration)
         {
-            services.AddApiControllers()
+            services.AddApiControllers(configuration)
                 .AddServices()
                 .AddMapper()
                 .AddPersistence(configuration);

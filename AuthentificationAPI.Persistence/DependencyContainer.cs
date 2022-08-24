@@ -16,6 +16,7 @@ namespace AuthentificationAPI.Persistence
                     x => x.MigrationsAssembly(typeof(RepositoryContext).Assembly.GetName().Name));                
             });
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }

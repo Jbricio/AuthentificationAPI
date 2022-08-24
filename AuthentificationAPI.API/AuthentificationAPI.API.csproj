@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuthentificationAPI.Contracts\AuthentificationAPI.Contracts.csproj" />
+    <ProjectReference Include="..\AuthentificationAPI.DTOS\AuthentificationAPI.DTOS.csproj" />
+  </ItemGroup>
+
 </Project>

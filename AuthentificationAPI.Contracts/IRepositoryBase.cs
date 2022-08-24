@@ -1,16 +1,21 @@
-﻿using System;
+﻿using Campus.Core;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AuthentificationAPI.Contracts
 {
-    public interface IRepositoryBase<T>
+    public interface IRepositoryBase<TKey>
     {
-        void Create(T entity);
-        Task<T> GetById(Expression<Func<T, bool>> filter);
-        Task<IList<T>> GetAll();
-        void Update(T entity);
-        void Delete(T entity);
+        Task<TEntity> Create <TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity :class,IEntityBase<TKey> ;
+        Task<TEntity> GetById<TEntity>(Expression<Func<TEntity, bool>> filter, CancellationToken cancellationToken) where TEntity : class, IEntityBase<TKey>;
+        DbSet<TEntity> GetEntity<TEntity>(CancellationToken cancellationToken) where TEntity : class, IEntityBase<TKey>;
+        Task<bool> Update<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class, IEntityBase<TKey>;
+        Task<bool> Delete<TEntity>(Expression<Func<TEntity, bool>> predicate,
+            CancellationToken cancellationToken) where TEntity : class, IEntityBase<TKey>;
+
     }
 }
